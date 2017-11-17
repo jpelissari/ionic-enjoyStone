@@ -1,0 +1,52 @@
+<!--
+  Generated template for the FormCardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Novo Cartão</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<br>
+<br>
+<br>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Número do cartão</ion-label>
+      <ion-input type="text" [(ngModel)]="model.card_number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Nome igual ao cartão</ion-label>
+      <ion-input type="text" [(ngModel)]="model.card_holder_name"></ion-input>
+    </ion-item>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col width-60>
+          <ion-item>
+            <ion-label stacked>Validade</ion-label>
+            <ion-datetime displayFormat="MM/YYYY" min="2017" max="2025-12" [(ngModel)]="model.card_expiration_date"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col width-60>
+          <ion-item>
+            <ion-label stacked>cvv</ion-label>
+            <ion-input type="text" [(ngModel)]="model.card_cvv"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+
+    <button ion-button block color="primary" (click)="createCard()"> Comprar</button>
+</ion-content>

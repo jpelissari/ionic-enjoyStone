@@ -1,0 +1,77 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Opções</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+  <img src="assets/imgs/show.jpeg">
+  <br>
+
+  <ion-item>
+    <h1>Show 1</h1>
+    <br>
+    <h2>25 de dezembro, 2017</h2>
+    <br>
+    <h3>Valor: R$150,00</h3>
+    <br>
+    <p>Tipo de ingresso: Inteira</p>
+    <br>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Forma de Pagamento</ion-label>
+    <ion-select [(ngModel)]="pay" (ngModelChange)="func(pay)">
+      <ion-option id="salvo" value="s" >Cartão *4242</ion-option>
+      <ion-option id="novo" value="n">Novo Cartão</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <br>
+  <button ion-button block (click)="createCard(pay)" color="primary" [disabled]="disableBtn"> Comprar</button>
+
+  <!-- <ion-item>
+    <ion-label>Usar cartão terminado em *4242</ion-label>
+    <ion-checkbox  checked="false"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Usar outro cartão</ion-label>
+    <ion-checkbox color="dark" checked="false"></ion-checkbox>
+  </ion-item> -->
+
+  <!-- <h1 text-center> Exemplo criação cartão</h1>
+
+  <ion-list> -->
+
+    <!-- <ion-item>
+      <ion-label stacked>API</ion-label>
+        <ion-input type="text" name="api_key" [(ngModel)]="model.api_key"></ion-input>
+    </ion-item> -->
+    <!-- <ion-item>
+      <ion-label stacked>Numero Cartao</ion-label>
+        <ion-input type="text" name="card_number" [(ngModel)]="model.card_number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>cvv</ion-label>
+        <ion-input type="text" name="card_cvv" [(ngModel)]="model.card_cvv"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" name="card_holder_name" [(ngModel)]="model.card_holder_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Exp </ion-label>
+        <ion-input type="text" name="card_expiration_date" [(ngModel)]="model.card_expiration_date"></ion-input>
+    </ion-item> -->
+
+
+  <!-- <button ion-button icon-left (click)="createCard()">
+    <ion-icon name="home"  ></ion-icon>
+    Left Icon
+  </button> -->
+<!-- </ion-content> -->

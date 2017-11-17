@@ -5,13 +5,69 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
+
+    <img src="assets/imgs/enjoy2.png" />
+
+    <ion-list>
+      <!-- <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+        {{ item }}
+      </button> -->
+      <!-- <button ion-button color=light clear full > -->
+      <button ion-item (click)="onClick()">
+      <!-- <ion-item> -->
+        <h2>TICKETS</h2>
+        <p>Compra e consulta</p>
+        <ion-icon name="film" style="color:#05391D" item-end ></ion-icon>
+      <!-- </ion-item> -->
+    </button>
+      <button ion-item (click)="Estac()">
+        <h2>ESTACIONAMENTOS</h2>
+        <p>Compra, consulta e mapa</p>
+        <ion-icon name="car" style="color:#05391D" item-end></ion-icon>
+      </button>
+      <button ion-item (click)="Cons()">
+        <h2>CONSUMAÇÃO</h2>
+        <p>Entrega, retirada e mapa</p>
+        <ion-icon name="beer" style="color:#05391D" item-end></ion-icon>
+      </button>
+      <button ion-item (click)="Lojas()">
+        <h2>LOJAS</h2>
+        <p>Produtos, entrega e mapa</p>
+        <ion-icon name="cart" style="color:#05391D" item-end></ion-icon>
+      </button>
+      <button ion-item (click)="ComoChegar()">
+        <h2>COMO CHEGAR</h2>
+        <p>Como chegar e voltar</p>
+        <ion-icon name="map" style="color:#05391D" item-end></ion-icon>
+      </button>
+      <button ion-item (click)="Cont()">
+        <h2>CONTEÚDO</h2>
+        <p>Vídeos e reportagens</p>
+      <ion-icon name="play" style="color:#05391D" item-end></ion-icon>
+      </button>
+      <button ion-item (click)="Socio()">
+        <h2>ÁREA DO SÓCIO</h2>
+        <p>Experiências</p>
+        <ion-icon name="ribbon" style="color:#05391D" item-end></ion-icon>
+      </button>
+
+
+    </ion-list>
+
+  <!-- <ion-content class="card-background-page">
+
+
+  <ion-card>
+
+    <div class="card-title">Bem Vindo</div>
+    <div class="card-subtitle">Enjoy App</div>
+  </ion-card> -->
+  <!-- <p>
     This starter project comes with simple tabs-based layout for apps
     that are going to primarily use a Tabbed UI.
   </p>
   <p>
     Take a look at the <code>src/pages/</code> directory to add or change tabs,
     update any existing page or create new pages.
-  </p>
+  </p> -->
 </ion-content>
