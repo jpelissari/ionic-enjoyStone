@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
+import { AreadosocioPage } from '../areadosocio/areadosocio';
+
 /**
  * Generated class for the ConsumacaoPage page.
  *
@@ -16,6 +19,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ConsumacaoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+goCarrinho() {
+  this.navCtrl.push(AreadosocioPage);
   }
 
   ionViewDidLoad() {

@@ -7,12 +7,70 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>consumacao</ion-title>
+    <ion-title>Consumação</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-list>
+    <!-- <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button> -->
+    <!-- <button ion-button color=light clear full > -->
+        <!-- <ion-item> -->
+
+      <ion-item >
+        <ion-avatar class="img1" item-start>
+          <img  src="assets/imgs/refrigerante.jpg" >
+        </ion-avatar>
+        <h2>Refrigerante</h2>
+        <p>R$5,00</p>
+        <button ion-button clear item-end>adicionar</button>
+      </ion-item>
+
+      <ion-item >
+        <h2>Cerveja</h2>
+        <!-- <h2>Cerveja</h2> -->
+        <p>R$10,00</p>
+        <ion-avatar item-start>
+          <img src="assets/imgs/cerveja.jpg">
+        </ion-avatar>
+        <button ion-button clear item-end>adicionar</button>
+        <!-- <ion-select [(ngModel)]="cerveja">
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+        </ion-select> -->
+
+    </ion-item>
+
+      <ion-item >
+        <h2>Pipoca</h2>
+        <p>R$12,00</p>
+        <ion-avatar item-start>
+          <img src="assets/imgs/pipoca.jpg">
+        </ion-avatar>
+      <button ion-button clear item-end>adicionar</button>
+    </ion-item>
+
+    <ion-item >
+      <h2>Hotdog</h2>
+      <p>R$15,00</p>
+      <ion-avatar item-start>
+        <img src="assets/imgs/hotdog.jpg">
+      </ion-avatar>
+    <button ion-button clear item-end>adicionar</button>
+  </ion-item>
+
+
+  </ion-list>
+
+  <br><br>
+
+  <button ion-button full (click)="goCarrinho()">Ir para o carrinho</button>
 
 </ion-content>

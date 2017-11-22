@@ -7,12 +7,87 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>areadosocio</ion-title>
+    <ion-title>Carrinho</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-list>
+    <!-- <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button> -->
+    <!-- <button ion-button color=light clear full > -->
+        <!-- <ion-item> -->
+
+      <ion-item >
+        <ion-avatar class="img1" item-start>
+          <img  src="assets/imgs/show.jpeg" >
+        </ion-avatar>
+        <h2>Ingresso</h2>
+        <p item-end>2 x R$50,00</p>
+
+      </ion-item>
+
+      <ion-item >
+        <h2>Cerveja</h2>
+        <!-- <h2>Cerveja</h2> -->
+        <p item-end>2 x R$10,00</p>
+        <ion-avatar item-start>
+          <img src="assets/imgs/cerveja.jpg">
+        </ion-avatar>
+      </ion-item>
+
+      <ion-item >
+        <h2>Pipoca</h2>
+        <p item-end>1 x R$12,00</p>
+        <ion-avatar item-start>
+          <img src="assets/imgs/pipoca.jpg">
+        </ion-avatar>
+
+    </ion-item>
+
+    <ion-item >
+      <h2>Hotdog</h2>
+      <p item-end>1 x R$15,00</p>
+      <ion-avatar item-start>
+        <img src="assets/imgs/hotdog.jpg">
+      </ion-avatar>
+
+  </ion-item>
+
+  <ion-item >
+    <h2>Taxas</h2>
+    <!-- <h2>Cerveja</h2> -->
+    <p item-end>3 x R$ 7,50</p>
+    <!-- <ion-avatar item-start>
+      <img src="assets/imgs/cerveja.jpg">
+    </ion-avatar> -->
+  </ion-item>
+  <ion-item >
+    <h2><b>Total</b></h2>
+    <!-- <h2>Cerveja</h2> -->
+    <p item-end><b>R$ 169,50</b></p>
+    <!-- <ion-avatar item-start>
+      <img src="assets/imgs/cerveja.jpg">
+    </ion-avatar> -->
+  </ion-item>
+
+
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Forma de Pagamento</ion-label>
+    <ion-select [(ngModel)]="pay" (ngModelChange)="func(pay)">
+      <ion-option id="salvo" value="s" >Cartão *4242</ion-option>
+      <ion-option id="novo" value="n">Novo Cartão</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <br>
+  <button ion-button full block (click)="createCard(pay)" color="primary" [disabled]="disableBtn"> Comprar</button>
+
 
 </ion-content>
