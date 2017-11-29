@@ -14,26 +14,26 @@
   <br>
 
   <ion-item>
-    <h1>Show 1</h1>
+    <h1>Jogo de Basquete</h1>
     <br>
-    <h2>25 de dezembro, 2017</h2>
+    <h2>24 de dezembro, 2017</h2>
     <br>
-    <h3>Valor: R$150,00</h3>
+    <h3>Valor: R$50,00</h3>
     <br>
     <p>Tipo de ingresso: Inteira</p>
     <br>
   </ion-item>
 
   <ion-item>
-    <ion-label>Forma de Pagamento</ion-label>
+    <ion-label>Quantidade</ion-label>
     <ion-select [(ngModel)]="pay" (ngModelChange)="func(pay)">
-      <ion-option id="salvo" value="s" >Cartão *4242</ion-option>
-      <ion-option id="novo" value="n">Novo Cartão</ion-option>
+      <ion-option id="salvo"  >1</ion-option>
+      <ion-option id="novo" >2</ion-option>
     </ion-select>
   </ion-item>
 
   <br>
-  <button ion-button block (click)="createCard(pay)" color="primary" [disabled]="disableBtn"> Comprar</button>
+  <button ion-button block (click)="goHome()" color="primary" [disabled]="disableBtn"> Comprar</button>
 
   <!-- <ion-item>
     <ion-label>Usar cartão terminado em *4242</ion-label>

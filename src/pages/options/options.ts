@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
+import { LoadingController } from 'ionic-angular';
 
 import { PaymentProvider } from './../../providers/payment/payment';
 import { Ingresso1Page } from '../ingresso1/ingresso1';
 import { FormCardPage } from '../form-card/form-card';
-
+import { HomePage } from '../home/home';
 /**
  * Generated class for the OptionsPage page.
  *
@@ -26,7 +27,7 @@ export class OptionsPage {
   novo: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private toast: ToastController,
-    private paymentProvider: PaymentProvider, public alertCtrl: AlertController) {
+    private paymentProvider: PaymentProvider, public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
 
       if (this.pay == null){
         this.disableBtn =true;
@@ -41,6 +42,11 @@ export class OptionsPage {
       this.model.amount= 15000;
   }
 
+  goHome() {
+    this.toast.create({ message: '2 x ingressos adicionados ao carrinho', position: 'botton', duration: 3000}).present();
+    this.navCtrl.push(HomePage);
+    }
+
   func(pay){
     if (pay != null || pay != "")
     {
@@ -50,7 +56,6 @@ export class OptionsPage {
   }
 
   createCard(pay){
-
 
       console.log('entrei aquiiiii:' + pay);
     if (pay != "s")  {
@@ -62,6 +67,11 @@ export class OptionsPage {
       this.paymentProvider.createCard(this.model.card_number, this.model.card_holder_name, this.model.card_expiration_date,  this.model.card_cvv, this.model.amount )
         .then((result:any) => {
           this.toast.create({ message: 'Transação criada com sucesso, id: ' + result.id, position: 'botton', duration: 3000}).present();
+          let loader = this.loadingCtrl.create({
+              content: "Aguarde...",
+              duration: 1500
+            });
+            loader.present();
           this.navCtrl.push(Ingresso1Page);
         })
         .catch((error: any) => {

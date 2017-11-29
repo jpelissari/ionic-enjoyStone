@@ -36,7 +36,11 @@ export class AreadosocioPage {
       this.model.card_number = '4242424242424242';
       this.model.card_expiration_date = '1122';
       this.model.card_cvv = '123';
+<<<<<<< HEAD
+      this.model.card_holder_name = 'Jhenyffer Pelissari';
+=======
       this.model.card_holder_name = 'Fabrizzio Fazenda';
+>>>>>>> b087bbe03fbe2513742a2e57883d1fe1ab42daeb
       this.model.amount= 16950;
   }
 

@@ -8,6 +8,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
+ import { Ingresso1Page } from '../ingresso1/ingresso1';
+
 @IonicPage()
 @Component({
   selector: 'page-lojas',
@@ -16,6 +18,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class LojasPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  goIngresso() {
+  this.navCtrl.push(Ingresso1Page);
   }
 
   ionViewDidLoad() {

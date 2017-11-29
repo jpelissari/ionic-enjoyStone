@@ -7,12 +7,43 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>lojas</ion-title>
+    <ion-title>Sua Compra</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+<h3 style="color:#05391D" > Parabéns pela sua compra! <br> Confira seus itens abaixo: </h3> <br><br>
+  <ion-list>
+    <!-- <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button> -->
+    <!-- <button ion-button color=light clear full > -->
+        <!-- <ion-item> -->
+
+      <ion-item >
+        <ion-avatar class="img1" item-start>
+          <img  src="assets/imgs/basket.jpeg" >
+        </ion-avatar>
+        <h2>Ingresso</h2>
+        <p item-end></p>
+            <button ion-button clear item-end (click)="goIngresso()">visualizar</button>
+
+      </ion-item>
+
+      <ion-item >
+        <h2>Consumação</h2>
+        <!-- <h2>Cerveja</h2> -->
+        <p item-end></p>
+        <ion-avatar item-start>
+          <img src="assets/imgs/cerveja.jpg">
+        </ion-avatar>
+    <button ion-button clear item-end>visualizar</button>
+
+  </ion-item>
+
+
+  </ion-list>
 
 </ion-content>
